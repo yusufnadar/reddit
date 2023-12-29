@@ -1,16 +1,95 @@
-# reddit
+# Scroll Mate
 
-A new Flutter project.
+Multiple scroll controller works synchronization and define how many line to show
+
+[![pub](https://img.shields.io/pub/v/scroll_mate)](https://pub.dev/packages/scroll_mate)
+
+## Preview
+
+![Scroll Mate](gifs/bottomBar.gif)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+You can handle multiple scroll controller synchronization. All lines scrolls start and end at the
+same time. Decide how many lines do you want to show on the screen.
 
-A few resources to get you started if this is your first Flutter project:
+## Properties
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### ScrollMateModel
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Parameter            | Type                                          | required | default                    |
+|----------------------|-----------------------------------------------|----------|----------------------------|
+| `items`              | `List<T>`                                     | yes      | -                          |
+| `builder`            | `ScrollMateItem Function(T title, int index)` | yes      | -                          |
+| `lineCount`          | `int`                                         | no       | 2                          |
+| `title`              | `Widget`                                      | no       | `SizedBox()`               |
+| `crossAxisAlignment` | `CrossAxisAlignment`                          | no       | `CrossAxisAlignment.start` |
+| `crossAxisSpacing`   | `double`                                      | no       | `10`                       |
+| `mainAxisSpacing`    | `double`                                      | no       | `20`                       |
+| `scrollPadding`      | `EdgeInsets`                                  | no       | `EdgeInsets.zero`          |
+
+### ScrollMateItem
+
+| Parameter     | Type     | required | default |
+|---------------|----------|----------|---------|
+| `item`        | `Widget` | yes      | -       |
+| `leftMargin`  | `double` | no       | 0       |
+| `rightMargin` | `double` | no       | 0       |
+
+## Features
+
+- [x] Multiple scroll controller works synchronization
+- [x] Define a line count parameter to show users
+- [x] Generic type can be used and custom widget you can show
+
+## Usage
+
+```
+ScrollMateList<String>(
+      scrollMateModel: ScrollMateModel(
+        lineCount: 4,
+        items: Interests.list,
+        title: buildInterestTitle(),
+        builder: (String title, int index) {
+          return ScrollMateItem(
+            rightMargin: 20,
+            leftMargin: 20,
+            item: ScrollMateChip(title: title.toString(), index: index),
+          );
+        },
+      ),
+    );
+```
+
+```
+const Padding(
+      padding: EdgeInsets.only(bottom: 15, left: 20, top: 15),
+      child: Text(
+        'Interests',
+        style: TextStyle(fontSize: 20, color: Color(0xff4c546d), fontWeight: FontWeight.bold),
+      ),
+    );
+```
+
+```
+ScrollMateItem(
+      rightMargin: 20,
+      leftMargin: 20,
+      item: Container(
+        height: 40,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: const Color(0xff4c546d),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    ).item;
+```
