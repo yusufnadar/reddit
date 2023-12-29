@@ -6,7 +6,7 @@ Multiple scroll controller works synchronization and define how many line to sho
 
 ## Preview
 
-![Scroll Mate](gifs/bottomBar.gif)
+![Scroll Mate](preview.mp4)
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ same time. Decide how many lines do you want to show on the screen.
 
 ## Properties
 
-### ScrollMateModel
+### Scroll Mate Model
 
 | Parameter            | Type                                          | required | default                    |
 |----------------------|-----------------------------------------------|----------|----------------------------|
@@ -28,7 +28,7 @@ same time. Decide how many lines do you want to show on the screen.
 | `mainAxisSpacing`    | `double`                                      | no       | `20`                       |
 | `scrollPadding`      | `EdgeInsets`                                  | no       | `EdgeInsets.zero`          |
 
-### ScrollMateItem
+### Scroll Mate Item
 
 | Parameter     | Type     | required | default |
 |---------------|----------|----------|---------|
