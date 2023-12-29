@@ -6,7 +6,7 @@ Multiple scroll controller works synchronization and define how many line to sho
 
 ## Preview
 
-![Scroll Mate](preview.mp4)
+![Scroll Mate](preview.mov)
 
 ## Getting Started
 
