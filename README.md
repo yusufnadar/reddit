@@ -19,6 +19,29 @@ same time. Decide how many lines do you want to show on the screen.
 - Define a line count parameter to show users
 - Generic type can be used and custom widget you can show
 
+## Properties
+
+### Scroll Mate Model
+
+| Parameter            | Type                                          | required | default                    |
+|----------------------|-----------------------------------------------|----------|----------------------------|
+| `items`              | `List<T>`                                     | yes      | -                          |
+| `builder`            | `ScrollMateItem Function(T title, int index)` | yes      | -                          |
+| `lineCount`          | `int`                                         | no       | 2                          |
+| `title`              | `Widget`                                      | no       | `SizedBox()`               |
+| `crossAxisAlignment` | `CrossAxisAlignment`                          | no       | `CrossAxisAlignment.start` |
+| `crossAxisSpacing`   | `double`                                      | no       | `10`                       |
+| `mainAxisSpacing`    | `double`                                      | no       | `20`                       |
+| `scrollPadding`      | `EdgeInsets`                                  | no       | `EdgeInsets.zero`          |
+
+### Scroll Mate Item
+
+| Parameter     | Type     | required | default |
+|---------------|----------|----------|---------|
+| `item`        | `Widget` | yes      | -       |
+| `leftMargin`  | `double` | no       | 0       |
+| `rightMargin` | `double` | no       | 0       |
+
 ## Usage
 
 ```
@@ -70,26 +93,3 @@ ScrollMateItem(
       ),
     ).item;
 ```
-
-## Properties
-
-### Scroll Mate Model
-
-| Parameter            | Type                                          | required | default                    |
-|----------------------|-----------------------------------------------|----------|----------------------------|
-| `items`              | `List<T>`                                     | yes      | -                          |
-| `builder`            | `ScrollMateItem Function(T title, int index)` | yes      | -                          |
-| `lineCount`          | `int`                                         | no       | 2                          |
-| `title`              | `Widget`                                      | no       | `SizedBox()`               |
-| `crossAxisAlignment` | `CrossAxisAlignment`                          | no       | `CrossAxisAlignment.start` |
-| `crossAxisSpacing`   | `double`                                      | no       | `10`                       |
-| `mainAxisSpacing`    | `double`                                      | no       | `20`                       |
-| `scrollPadding`      | `EdgeInsets`                                  | no       | `EdgeInsets.zero`          |
-
-### Scroll Mate Item
-
-| Parameter     | Type     | required | default |
-|---------------|----------|----------|---------|
-| `item`        | `Widget` | yes      | -       |
-| `leftMargin`  | `double` | no       | 0       |
-| `rightMargin` | `double` | no       | 0       |
