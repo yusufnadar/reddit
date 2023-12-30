@@ -6,7 +6,7 @@ Multiple scroll controller works synchronization and define how many line to sho
 
 ## Preview
 
-[![pub](https://img.shields.io/pub/v/scroll_mate)](https://pub.dev/packages/scroll_mate)
+<img src="https://github.com/yusufnadar/reddit/blob/master/preview.gif" alt="Example Project" height="350" />
 
 ## Getting Started
 
