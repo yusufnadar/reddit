@@ -93,3 +93,21 @@ ScrollMateItem(
       ),
     ).item;
 ```
+
+## Other Usage
+
+You can create own scroll controller widget. Just use the initialize function
+in your initState function and send scrollController list as a parameter.
+
+```
+  final scrollController = ScrollController();
+  final scrollController2 = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    ScrollMateController.instance.initController(
+      scrollControllers: [scrollController, scrollController2],
+    );
+  }
+```
