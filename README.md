@@ -2,7 +2,7 @@
 
 Multiple scroll controller works synchronization and define how many line to show
 
-[![pub](https://img.shields.io/pub/v/scroll_mate)](https://pub.dev/packages/scroll_mate)
+[![pub](https://img.shields.io/pub/v/nadarchitecture)](https://pub.dev/packages/nadarchitecture)
 
 ## Preview
 
