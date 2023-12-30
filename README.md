@@ -6,8 +6,7 @@ Multiple scroll controller works synchronization and define how many line to sho
 
 ## Preview
 
-![Scroll Mate](preview.mov)
-<img src="https://raw.githubusercontent.com/EdsonBueno/infinite_scroll_pagination/master/docs/assets/demo.gif" alt="Example Project" />
+<img src="https://drive.google.com/file/d/1yUTFdm7fwbvYlsjpRL_ypuQhoN27j9p4/view?usp=sharing" alt="Example Project" />
 
 ## Getting Started
 
