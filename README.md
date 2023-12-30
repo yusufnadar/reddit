@@ -6,7 +6,7 @@ Multiple scroll controller works synchronization and define how many line to sho
 
 ## Preview
 
-<img src="https://github.com/yusufnadar/reddit/blob/master/preview.gif" alt="Example Project" height="100" />
+<img src="https://github.com/yusufnadar/reddit/blob/master/preview.gif" alt="Example Project" height="250" />
 
 ## Getting Started
 
